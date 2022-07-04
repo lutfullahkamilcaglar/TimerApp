@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     
+    @IBOutlet weak var timerImage: UIImageView!
+    
     var timer:Timer = Timer()
     var count:Int = 0
     var timerCounting:Bool = false
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
             timerCounting = false
             timer.invalidate()
             startStopButton.setTitle("START", for: .normal)
-            startStopButton.setTitleColor(UIColor.green, for: .normal)
+            
         } else {
             timerCounting = true
             startStopButton.setTitle("STOP", for: .normal)
